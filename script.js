@@ -1,4 +1,3 @@
-// REGISTER
 function registerUser() {
     let user = {
         name: rname.value,
@@ -16,7 +15,6 @@ function registerUser() {
     window.location.href = "login.html";
 }
 
-// LOGIN
 function loginUser() {
     let user = JSON.parse(localStorage.getItem("user"));
 
@@ -33,7 +31,6 @@ function loginUser() {
     }
 }
 
-// BOOK DATA
 let books = [
     {
         name: "JavaScript Basics",
