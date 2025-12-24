@@ -1,44 +1,60 @@
-function addBook() {
-    let bookName = document.getElementById("bookName").value;
-    let authorName = document.getElementById("authorName").value;
+// REGISTER
+function registerUser() {
+    let name = rname.value;
+    let email = remail.value;
+    let password = rpassword.value;
 
-    if (bookName === "" || authorName === "") {
-        alert("Please fill all fields");
+    if (!name || !email || !password) {
+        alert("All fields required");
         return;
     }
 
-    let table = document.getElementById("bookList");
-
-    let row = table.insertRow();
-    row.insertCell(0).innerText = bookName;
-    row.insertCell(1).innerText = authorName;
-    row.insertCell(2).innerText = "Available";
-
-    let actionCell = row.insertCell(3);
-
-    let issueBtn = document.createElement("button");
-    issueBtn.innerText = "Issue";
-    issueBtn.className = "issue";
-    issueBtn.onclick = function () {
-        if (row.cells[2].innerText === "Available") {
-            row.cells[2].innerText = "Issued";
-            issueBtn.innerText = "Return";
-        } else {
-            row.cells[2].innerText = "Available";
-            issueBtn.innerText = "Issue";
-        }
-    };
-
-    let deleteBtn = document.createElement("button");
-    deleteBtn.innerText = "Delete";
-    deleteBtn.className = "delete";
-    deleteBtn.onclick = function () {
-        table.deleteRow(row.rowIndex - 1);
-    };
-
-    actionCell.appendChild(issueBtn);
-    actionCell.appendChild(deleteBtn);
-
-    document.getElementById("bookName").value = "";
-    document.getElementById("authorName").value = "";
+    localStorage.setItem("user", JSON.stringify({ name, email, password }));
+    alert("Registration Successful");
+    window.location.href = "login.html";
 }
+
+// LOGIN
+function loginUser() {
+    let email = lemail.value;
+    let password = lpassword.value;
+    let user = JSON.parse(localStorage.getItem("user"));
+
+    if (!user) {
+        alert("Please register first");
+        return;
+    }
+
+    if (email === user.email && password === user.password) {
+        alert("Login Successful");
+        window.location.href = "books.html";
+    } else {
+        alert("Wrong details");
+    }
+}
+
+// BOOKS
+let books = [
+    { name: "JavaScript Basics", author: "John Smith", img: "https://covers.openlibrary.org/b/id/10521270-L.jpg" },
+    { name: "HTML & CSS", author: "Mark Allen", img: "https://covers.openlibrary.org/b/id/10909258-L.jpg" },
+    { name: "Python Programming", author: "David Ross", img: "https://covers.openlibrary.org/b/id/11153241-L.jpg" }
+];
+
+function loadBooks() {
+    let list = document.getElementById("bookList");
+    if (!list) return;
+
+    books.forEach(book => {
+        let div = document.createElement("div");
+        div.className = "book";
+        div.innerHTML = `
+            <img src="${book.img}">
+            <h3>${book.name}</h3>
+            <p>${book.author}</p>
+            <button onclick="alert('Book Issued')">Issue</button>
+        `;
+        list.appendChild(div);
+    });
+}
+
+window.onload = loadBooks;
