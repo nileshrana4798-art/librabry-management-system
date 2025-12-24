@@ -1,35 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>Library Management System</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<header>
     <h1>📚 Library Management System</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="books.html">Books</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+    </nav>
+</header>
 
-    <div class="container">
-        <h2>Add Book</h2>
-        <input type="text" id="bookName" placeholder="Book Name">
-        <input type="text" id="authorName" placeholder="Author Name">
-        <button onclick="addBook()">Add Book</button>
+<section class="hero">
+    <h2>Welcome to Digital Library</h2>
+    <p>Manage books, issue & return easily</p>
+</section>
 
-        <h2>Book List</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Book</th>
-                    <th>Author</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody id="bookList">
-            </tbody>
-        </table>
-    </div>
+<section class="features">
+    <div class="card">📖 Thousands of Books</div>
+    <div class="card">👨‍🎓 Student Friendly</div>
+    <div class="card">🔒 Secure System</div>
+</section>
 
-    <script src="script.js"></script>
+<footer>
+    <p>© 2025 Library Management System</p>
+</footer>
+
 </body>
 </html>
