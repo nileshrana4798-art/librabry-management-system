@@ -5,13 +5,13 @@
 }
 
 .bg {
-    background: url("../images/bg.jpg") no-repeat center center/cover;
+    background: url("images/bg.jpg") no-repeat center center/cover;
     min-height: 100vh;
 }
 
 /* NAVBAR */
 .navbar {
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.75);
     color: white;
     padding: 15px;
     display: flex;
@@ -31,7 +31,7 @@
     padding: 120px 20px;
 }
 
-.hero .btn {
+.btn {
     display: inline-block;
     padding: 12px 25px;
     background: #3498db;
