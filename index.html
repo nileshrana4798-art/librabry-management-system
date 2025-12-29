@@ -1,132 +1,177 @@
-<style>
-body{
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url("c1.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    scroll-behavior: smooth;
-}
+<!-- HOME -->
+<section id="home">
+<div class="section-box">
+    <h2>Welcome to Student Management System</h2>
+    <p>
+        A complete digital solution designed to manage student information,
+        academic records, attendance, exams and administration efficiently
+        on a single platform.
+    </p>
 
-/* HEADER */
-.heading{
-    background: #000000e0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+    <div class="hero-buttons">
+        <button onclick="location.href='#about'">Learn More</button>
+        <button class="outline" onclick="location.href='#features'">Explore Features</button>
+    </div>
 
-.heading img{
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    border: 2px solid #ffd700;
-}
+    <div class="info-grid">
+        <div class="info-box">
+            <h3>Smart System</h3>
+            <p>Automates academic and administrative processes digitally.</p>
+        </div>
+        <div class="info-box">
+            <h3>Secure Data</h3>
+            <p>Student information is protected with login authentication.</p>
+        </div>
+        <div class="info-box">
+            <h3>Easy Access</h3>
+            <p>Students and teachers can access data anytime.</p>
+        </div>
+    </div>
+</div>
+</section>
 
-.heading h1{
-    color: white;
-    font-size: 26px;
-}
+<!-- ABOUT -->
+<section id="about">
+<div class="section-box">
+    <h2>About the System</h2>
 
-nav a{
-    color: white;
-    margin-left: 20px;
-    text-decoration: none;
-    font-weight: bold;
-}
+    <div class="info-grid">
+        <div class="info-box">
+            <h3>Purpose</h3>
+            <p>
+                The system reduces manual paperwork and manages student
+                information in digital form.
+            </p>
+        </div>
 
-nav a:hover{
-    color: #ffd700;
-}
+        <div class="info-box">
+            <h3>How It Works</h3>
+            <p>
+                Data is stored in a database and accessed through
+                role based login.
+            </p>
+        </div>
 
-/* SECTION COMMON */
-section{
-    padding: 80px 40px;
-    color: white;
-}
+        <div class="info-box">
+            <h3>Target Users</h3>
+            <p>
+                Administrators, teachers and students use the system
+                according to their roles.
+            </p>
+        </div>
+    </div>
+</div>
+</section>
 
-.section-box{
-    max-width: 1100px;
-    margin: auto;
-    background: rgba(0,0,0,0.75);
-    padding: 40px;
-    border-radius: 15px;
-}
+<!-- FEATURES -->
+<section id="features">
+<div class="section-box">
+    <h2>System Features</h2>
 
-section h2{
-    font-size: 40px;
-    margin-bottom: 15px;
-    color: #ffd700;
-    text-align: center;
-}
+    <div class="info-grid">
+        <div class="info-box">
+            <h3>Student Module</h3>
+            <ul>
+                <li>Registration</li>
+                <li>Profile Management</li>
+                <li>Attendance View</li>
+                <li>Result Access</li>
+            </ul>
+        </div>
 
-section p{
-    font-size: 18px;
-    line-height: 1.8;
-    text-align: center;
-}
+        <div class="info-box">
+            <h3>Teacher Module</h3>
+            <ul>
+                <li>Attendance Update</li>
+                <li>Marks Entry</li>
+                <li>Student Performance</li>
+            </ul>
+        </div>
 
-/* HOME */
-.hero-buttons{
-    text-align: center;
-    margin-top: 30px;
-}
+        <div class="info-box">
+            <h3>Admin Module</h3>
+            <ul>
+                <li>User Management</li>
+                <li>Course Control</li>
+                <li>Report Generation</li>
+            </ul>
+        </div>
 
-.hero-buttons button{
-    padding: 12px 30px;
-    margin: 10px;
-    border-radius: 30px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    background: #ffd700;
-}
+        <div class="info-box">
+            <h3>Fee & Exam</h3>
+            <ul>
+                <li>Fee Records</li>
+                <li>Payment Status</li>
+                <li>Exam Results</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</section>
 
-.hero-buttons .outline{
-    background: transparent;
-    border: 2px solid #ffd700;
-    color: #ffd700;
-}
+<!-- BENEFITS -->
+<section id="benefits">
+<div class="section-box">
+    <h2>Benefits</h2>
 
-/* GRID BOXES */
-.info-grid{
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 40px;
-}
+    <div class="info-grid">
+        <div class="info-box">
+            <h3>For Institution</h3>
+            <p>Improves efficiency and reduces errors.</p>
+        </div>
 
-.info-box{
-    background: rgba(255,255,255,0.08);
-    padding: 25px;
-    width: 300px;
-    border-radius: 12px;
-}
+        <div class="info-box">
+            <h3>For Teachers</h3>
+            <p>Saves time and simplifies academic work.</p>
+        </div>
 
-.info-box h3{
-    color: #ffd700;
-    margin-bottom: 10px;
-}
+        <div class="info-box">
+            <h3>For Students</h3>
+            <p>Quick access to academic information.</p>
+        </div>
+    </div>
+</div>
+</section>
 
-.info-box ul{
-    padding-left: 18px;
-}
+<!-- ROLES -->
+<section id="roles">
+<div class="section-box">
+    <h2>Roles & Security</h2>
 
-.info-box li{
-    line-height: 1.7;
-}
+    <div class="info-grid">
+        <div class="info-box">
+            <h3>User Roles</h3>
+            <ul>
+                <li>Administrator</li>
+                <li>Teacher</li>
+                <li>Student</li>
+            </ul>
+        </div>
 
-/* FOOTER */
-.footer{
-    background: #000000e0;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-</style>
-</head>
+        <div class="info-box">
+            <h3>Security</h3>
+            <ul>
+                <li>Login Authentication</li>
+                <li>Role Based Access</li>
+                <li>Secure Database</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h3>Future Scope</h3>
+            <p>
+                Can be extended with mobile app, online payment
+                and cloud support.
+            </p>
+        </div>
+    </div>
+</div>
+</section>
+
+<footer class="footer">
+    <p>© 2025 Student Management System</p>
+    <p>Designed for Educational Institutions</p>
+</footer>
+
+</body>
+</html>
